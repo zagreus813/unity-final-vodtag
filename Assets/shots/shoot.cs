@@ -18,6 +18,14 @@ public class shoot : MonoBehaviour
         var pos = transform.position;
         pos.y = (pos.y + 0.2f) * firerate;
         transform.position = new Vector2(pos.x, pos.y);
+        if (transform.position.y > 5 && gameObject.name == "clonedbullet1")
+        {
+            Destroy(gameObject);
+        }
+    }
+    public void increasedamage()
+    {
+        damage += 1;
     }
     public void OnCollisionEnter2D(Collision2D collision)
     {
@@ -38,6 +46,8 @@ public class shoot : MonoBehaviour
             var hp3 = collision.gameObject.GetComponent<HP3>();
             hp3.kamKardan(damage);
             Destroy(gameObject);
+
         }
+        
     }
 }

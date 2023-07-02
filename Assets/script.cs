@@ -28,4 +28,22 @@ public class script : MonoBehaviour
             }
         }
     }
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name == "level1")
+        {
+            Destroy(gameObject);
+        }
+        if (collision.gameObject.name == "level2")
+        {
+            Destroy(gameObject);
+        }
+        if (collision.gameObject.name == "level3")
+        {
+            Destroy(gameObject);
+        }
+
+
+
+    }
 }

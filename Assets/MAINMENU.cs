@@ -5,12 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class MAINMENU : MonoBehaviour
 {
+    public AudioSource audioSource;
     public void playGmae()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void QuitGame()
     {
+
         Debug.Log("Quit!!!");
         Application.Quit();
     }
